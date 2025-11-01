@@ -1,0 +1,85 @@
+.donate-section {
+  background: linear-gradient(180deg, #fff 0%, #f7f3ff 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.donate-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.donate-container h2 {
+  color: #5e17eb;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.donate-container p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.donate-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.bank-info, .qr-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 20px rgba(94, 23, 235, 0.1);
+}
+
+.qr-image {
+  width: 180px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(94, 23, 235, 0.2);
+}
+
+/* Donor Form */
+.donor-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(94, 23, 235, 0.1);
+}
+
+.donor-form h3 {
+  color: #5e17eb;
+  margin-bottom: 20px;
+}
+
+.donor-form input,
+.donor-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.donor-form button {
+  background: #5e17eb;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.donor-form button:hover {
+  background: #4b0fc5;
+  transform: scale(1.05);
+}

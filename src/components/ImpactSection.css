@@ -1,0 +1,113 @@
+.impact-section {
+  position: relative;
+  background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.impact-overlay {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+.impact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.impact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.impact-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 40px;
+  width: 220px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.impact-card:hover::before {
+  opacity: 1;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.impact-icon {
+  font-size: 40px;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.impact-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 10px 0;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.impact-text {
+  font-size: 1rem;
+  color: #f0e9ff;
+  letter-spacing: 1px;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(15px);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .impact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .impact-card {
+    width: 80%;
+  }
+}
