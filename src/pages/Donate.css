@@ -1,85 +1,139 @@
 .donate-section {
-  background: linear-gradient(180deg, #fff 0%, #f7f3ff 100%);
-  padding: 80px 20px;
-  text-align: center;
+  background: linear-gradient(135deg, #f4e9ff, #faf7ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .donate-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(108, 71, 207, 0.25);
   max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
 }
 
 .donate-container h2 {
-  color: #5e17eb;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5a2ea6;
+  margin-bottom: 10px;
 }
 
 .donate-container p {
-  color: #555;
-  margin-bottom: 40px;
+  color: #6d5ebd;
+  margin-bottom: 30px;
 }
 
 .donate-details {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.bank-info, .qr-section {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  width: 300px;
-  box-shadow: 0 4px 20px rgba(94, 23, 235, 0.1);
+.bank-info,
+.qr-section {
+  flex: 1;
+  min-width: 280px;
+  margin: 10px;
+  background: #f9f6ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: inset 0 0 8px rgba(108, 71, 207, 0.1);
+}
+
+.bank-info h3,
+.qr-section h3 {
+  color: #5a2ea6;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .qr-image {
   width: 180px;
+  height: auto;
+  border-radius: 10px;
   margin-top: 10px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(94, 23, 235, 0.2);
+  box-shadow: 0 0 10px rgba(108, 71, 207, 0.2);
 }
 
-/* Donor Form */
 .donor-form {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(94, 23, 235, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
 }
 
 .donor-form h3 {
-  color: #5e17eb;
-  margin-bottom: 20px;
+  text-align: center;
+  color: #5a2ea6;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .donor-form input,
 .donor-form textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  border: 1.5px solid #c7b4f3;
   border-radius: 10px;
   font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+  color: #333;
+  background: #fff;
 }
 
-.donor-form button {
-  background: #5e17eb;
-  color: white;
-  padding: 12px 25px;
+.donor-form input:focus,
+.donor-form textarea:focus {
+  border-color: #7f56d9;
+  box-shadow: 0 0 6px rgba(127, 86, 217, 0.3);
+}
+
+.donor-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #7b4cff, #9b79f1);
   border: none;
-  border-radius: 25px;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.donor-form button:hover {
-  background: #4b0fc5;
-  transform: scale(1.05);
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #9b79f1, #b998ff);
+  box-shadow: 0 0 10px rgba(155, 121, 241, 0.4);
+  transform: scale(1.03);
+}
+
+.status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #5a2ea6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donate-details {
+    flex-direction: column;
+  }
+  .bank-info,
+  .qr-section {
+    text-align: center;
+  }
 }
