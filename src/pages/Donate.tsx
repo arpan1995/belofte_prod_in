@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Donate.css";
 import qr from "../assets/qr.png"; // QR image in assets folder
+import Footer from "../components/Footer";
 
 const Donate: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -31,7 +32,7 @@ const Donate: React.FC = () => {
   };
 
   return (
-    <section className="donate-section">
+    <><section className="donate-section">
       <div className="donate-container">
         <h2>Support Belofte Foundation</h2>
         <p>
@@ -63,9 +64,12 @@ const Donate: React.FC = () => {
           <button type="submit">Submit</button>
           {status && <p className="status">{status}</p>}
         </form>
+
       </div>
-    </section>
+
+    </section><Footer /></>
   );
 };
+
 
 export default Donate;

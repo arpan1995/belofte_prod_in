@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -30,12 +31,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact-container">
+    <><div className="contact-container">
       <div className="contact-card">
         <div className="contact-info">
           <h2 className="contact-title">Get in Touch 💜</h2>
           <p className="contact-text">
-            Have questions or want to collaborate?  
+            Have questions or want to collaborate?
             We’d love to hear from you — let’s make an impact together.
           </p>
 
@@ -79,7 +80,7 @@ const Contact: React.FC = () => {
           {status && <p className="status">{status}</p>}
         </form>
       </div>
-    </div>
+    </div><Footer /></>
   );
 };
 

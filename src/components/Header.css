@@ -1,111 +1,168 @@
-/* General Header Styling */
+/* ==============================
+   HEADER STYLING (Belofte Theme)
+   ============================== */
 .header {
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(12px);
-  background: rgba(75, 0, 130, 0.85); /* Violet glass effect */
-  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(122, 63, 241, 0.9),
+    rgba(176, 123, 255, 0.85)
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(122, 63, 241, 0.3);
+  padding: 14px 40px;
+  transition: background 0.3s ease;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Logo Section */
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
-.logo-img {
-  height: 45px;
-  width: auto;
-  margin-right: 10px;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+.logo {
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.brand-text {
-  font-size: 1.6rem;
+.brand-name {
+  font-size: 1.4rem;
   font-weight: 700;
-  color: white;
+  background: linear-gradient(90deg, #ffffff, #e0c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
-}
-
-.highlight {
-  color: #ffccff;
-  text-shadow: 0 0 8px rgba(255, 200, 255, 0.8);
 }
 
 /* Navigation Links */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
-  color: #f0e6ff;
-  transition: all 0.3s ease;
+  color: #f8f4ff;
   position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a:hover {
   color: #ffffff;
 }
 
-.nav-links a.active::after {
+.nav-links a::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -6px;
+  bottom: -4px;
   left: 0;
-  background: #ffccff;
-  box-shadow: 0 0 10px #ffccff;
-  border-radius: 2px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 /* Donate Button */
 .donate-btn {
-  background: linear-gradient(135deg, #ff8efb, #9b4dff);
-  color: white;
+  background: linear-gradient(135deg, #ff66c4, #8e44ff);
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 40px;
   font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 30px;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(255, 180, 255, 0.6);
+  letter-spacing: 0.6px;
+  box-shadow: 0 6px 18px rgba(255, 102, 196, 0.4);
   transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
 }
 
+/* Hover Effect */
 .donate-btn:hover {
-  background: linear-gradient(135deg, #9b4dff, #ff8efb);
-  box-shadow: 0 0 25px rgba(255, 180, 255, 0.9);
+  background: linear-gradient(135deg, #8e44ff, #ff66c4);
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 102, 196, 0.6);
 }
 
-/* Responsive Design */
+/* Shimmer Effect */
+.animated-donate-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-donate-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+.animated-donate-btn:hover::before {
+  animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Pulse Animation */
+.animated-donate-btn {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 102, 196, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 102, 196, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 102, 196, 0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
   .nav-links {
-    gap: 15px;
-  }
-
-  .brand-text {
-    font-size: 1.3rem;
-  }
-
-  .donate-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
