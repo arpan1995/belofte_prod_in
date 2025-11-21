@@ -47,6 +47,7 @@ const Donate: React.FC = () => {
             <p><strong>Account Name:</strong> Dum Dum Belofte Foundation</p>
             <p><strong>Account Number:</strong> 2051354743 </p>
             <p><strong>IFSC:</strong> KKBK0000322 </p>
+            <p><strong>UPI:</strong> bfddum@kotak </p>
           </div>
 
           <div className="qr-section">
