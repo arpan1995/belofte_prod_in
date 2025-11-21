@@ -43,10 +43,10 @@ const Donate: React.FC = () => {
         <div className="donate-details">
           <div className="bank-info">
             <h3>Bank Details</h3>
-            <p><strong>Bank Name:</strong> HDFC Bank</p>
-            <p><strong>Account Name:</strong> Belofte Foundation</p>
-            <p><strong>Account Number:</strong> 1234567890</p>
-            <p><strong>IFSC:</strong> HDFC0001234</p>
+            <p><strong>Bank Name:</strong> Kotak Mahindra Bank </p>
+            <p><strong>Account Name:</strong> Dum Dum Belofte Foundation</p>
+            <p><strong>Account Number:</strong> 2051354743 </p>
+            <p><strong>IFSC:</strong> KKBK0000322 </p>
           </div>
 
           <div className="qr-section">
